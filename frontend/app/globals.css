@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+  :focus-visible {
+    outline: 2px solid theme("colors.amber.500");
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: theme("colors.amber.100");
+    color: theme("colors.navy.900");
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-navy-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center rounded-md bg-amber-500 px-5 py-2.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-900 disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-line bg-white px-5 py-2.5 text-sm font-semibold text-navy-900 transition-colors hover:border-navy-500 hover:bg-paper disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .input-field {
+    @apply w-full rounded-md border border-line bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-navy-500 focus:outline-none focus:ring-1 focus:ring-navy-500;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink/80;
+  }
+  .card {
+    @apply rounded-card border border-line bg-white shadow-card;
+  }
+}

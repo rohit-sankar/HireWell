@@ -1,0 +1,23 @@
+# Go
+backend/bin/
+backend/*.test
+backend/uploads/resumes/*
+!backend/uploads/resumes/.gitkeep
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/tsconfig.tsbuildinfo
+
+# Env / secrets
+.env
+.env.local
+backend/.env
+frontend/.env.local
+
+# OS / editor
+.DS_Store
+*.log
+.idea/
+.vscode/

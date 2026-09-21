@@ -1,0 +1,5 @@
+.env
+bin/
+uploads/resumes/*
+!uploads/resumes/.gitkeep
+*.test
